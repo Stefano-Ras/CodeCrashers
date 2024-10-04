@@ -1,0 +1,30 @@
+body {
+    background-color: cadetblue;
+}
+
+img {
+    border: 2px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#text {
+    font-size: 2em;
+    font-family: Calibri;
+    text-shadow: 2px 2px #999999;
+}
+
+#you {
+    background: black;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    > div > img {
+        display: none;
+    }
+    > div > p {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin-top: 250px;
+        text-align: center;
+    }
+}

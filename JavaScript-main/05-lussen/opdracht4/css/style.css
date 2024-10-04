@@ -1,0 +1,11 @@
+body {
+    background-color: darkslategray;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+}
+
+.grid-item {
+    display: inline-block;
+    background-color: beige;
+}

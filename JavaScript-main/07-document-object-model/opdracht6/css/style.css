@@ -1,0 +1,13 @@
+section {
+    display: flex;
+}
+
+span {
+    display: block;
+    text-align: right;
+}
+
+input {
+    text-align: right;
+    width: 100px;
+}

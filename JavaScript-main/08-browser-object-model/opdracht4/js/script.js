@@ -1,21 +1,38 @@
-function leaveSite() {
-    setTimeout(location.assign("https://youtu.be/kTp2tYKmftE?t=31"), 450);
-}
-document.getElementById("leave").addEventListener("click", leaveSite);
+document.getElementById("leave").addEventListener('click', (e) => {
+    setTimeout(() => {
+        location.assign("https://youtu.be/kTp2tYKmftE?t=31");
+     }, 4500)
+});
 
-function changeBackground(){
-    document.querySelector("body").style.background = "dodgerblue";
-}
-document.getElementById("background").addEventListener("click", changeBackground);
+document.getElementById("background").addEventListener('click', (e) => {
+    setTimeout(() => {
+        document.querySelector("body").style.background = "dodgerblue";
+     }, 3000)
+});
 
-function addContent() {
-    const addParagraph = document.createElement("p");
-    const addText = document.createTextNode("This is new text!");
-    addParagraph.appendChild(addText);
-    const element = document.querySelector("body");
-    element.appendChild(addParagraph);
-}
-document.getElementById("addcontent").addEventListener("click", addContent);
+document.getElementById("addcontent").addEventListener('click', (e) => {
+    setTimeout(() => {
+        const addParagraph = document.createElement("p");
+        const addText = document.createTextNode("This is new text!");
+        addParagraph.appendChild(addText);
+        const element = document.querySelector("body");
+        element.appendChild(addParagraph);
+    }, 2000)
+    setTimeout(() => {
+        const addParagraph = document.createElement("p");
+        const addText = document.createTextNode("This is more new text!");
+        addParagraph.appendChild(addText);
+        const element = document.querySelector("body");
+        element.appendChild(addParagraph);
+    }, 4000)
+    setTimeout(() => {
+        const addParagraph = document.createElement("p");
+        const addText = document.createTextNode("This is even more new text!");
+        addParagraph.appendChild(addText);
+        const element = document.querySelector("body");
+        element.appendChild(addParagraph);
+    }, 6000)
+});
 
 function stop() {
     clearTimeout(leave);

@@ -1,0 +1,14 @@
+@font-face {
+    font-family: alarm;
+    src: url(alarm\ clock.ttf);
+}
+
+body {
+    background: black;
+}
+p {
+    font-family: alarm;
+    font-size: 25px;
+    font-weight: bold;
+    color: springgreen;
+}

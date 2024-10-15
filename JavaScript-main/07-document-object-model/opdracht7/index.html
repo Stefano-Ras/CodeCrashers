@@ -4,8 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Opdracht 7-7</title>
+    <script src="js/script.js"></script>
 </head>
 <body>
-    
+    <form>
+        <section>
+            <span>Toevoegen</span>
+            <select class="element">
+                <option>H1</option>
+                <option>H2</option>
+                <option>H3</option>
+                <option>P</option>
+                <option>Blockquote</option>
+            </select>
+            <span>Inhoud</span>
+            <input class="text" type="text">
+            <button type="submit">Toevoegen</button>
+        </section>
+        <section>
+            <span>Lettertype</span>
+            <select class="font" onchange="changeFont()">
+                <option value="Arial">Arial</option>
+                <option value="Calibri">Calibri</option>
+                <option value="Monospace">Monospace</option>
+            </select>
+            <span>Achtergrondkleur</span>
+            <input class="background" type="color">
+            <span>Textkleur</span>
+            <input class="fontsize" type="color">
+            <span>Lettergrootte</span>
+            <input type="number">
+        </section>
+    </form>
+    <hr>
+    <section class="content">
+        
+    </section>
 </body>
 </html>
+<!--
+
+-->

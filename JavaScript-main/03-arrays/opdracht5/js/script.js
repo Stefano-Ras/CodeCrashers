@@ -26,3 +26,10 @@ producten[1].prijs = 1.49;
 producten[2].prijs = 2.79;
 producten[3].prijs = 29.99;
 console.log(producten);
+
+table = document.querySelector("table");
+
+producten.forEach((producten) => {
+    table.innerHTML += '<tr><td>' + producten.naam + '</td><td>'
+    + producten.prijs + '</td><td>' + producten.beschikbaar + '</td></tr>';
+});

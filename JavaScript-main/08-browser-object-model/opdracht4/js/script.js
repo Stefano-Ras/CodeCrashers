@@ -35,6 +35,6 @@ document.getElementById("addcontent").addEventListener('click', (e) => {
 });
 
 function stop() {
-    clearTimeout(leave);
+    clearTimeout();
 }
 document.getElementById("stop").addEventListener("click", stop);

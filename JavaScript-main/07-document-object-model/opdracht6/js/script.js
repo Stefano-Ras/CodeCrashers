@@ -1,6 +1,3 @@
-//1 Euro = 1,09 dollar
-//1 dollar = 0,92 Euro
-
 let euro = document.querySelector("#euro").value;
 let dollar = document.querySelector("#dollar").value;
 

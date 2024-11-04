@@ -1,7 +1,12 @@
 document.querySelector("button").addEventListener("click", changeList);
-list = document.querySelector("ul");
 function changeList() {
-    for(listitem in list) {
-        document.querySelectorAll("li").innerHTML = "Dit is item ";
+    const list = document.querySelectorAll("li");
+    for(let i = 0; i < list.length; i++) {
+        if(i === 5) {
+            continue;
+        }
+        x = i + 1
+        list[i].innerHTML = "Dit is item " + x;
+        console.log(i);
     }
 }

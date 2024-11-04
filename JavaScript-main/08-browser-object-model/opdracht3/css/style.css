@@ -1,0 +1,33 @@
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 500px;
+}
+
+section p {
+    width: 150px;
+    height: 150px;
+    background: url(navigation-buttons-s.png);
+    background-repeat: no-repeat;
+}
+
+.close {
+    background-position: -150px 0px;
+}
+
+.reload {
+    background-position: -300px 0px;
+}
+
+.back {
+    background-position: 0px -150px;
+}
+
+.forward {
+    background-position: -150px -150px;
+}
+
+.info {
+    background-position: -300px -150px;
+}

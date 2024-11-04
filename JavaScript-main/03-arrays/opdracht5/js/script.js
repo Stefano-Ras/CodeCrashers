@@ -25,6 +25,7 @@ producten[0].prijs = 1.29;
 producten[1].prijs = 1.49;
 producten[2].prijs = 2.79;
 producten[3].prijs = 29.99;
+producten[1].beschikbaar = 1;
 console.log(producten);
 
 table = document.querySelector("table");

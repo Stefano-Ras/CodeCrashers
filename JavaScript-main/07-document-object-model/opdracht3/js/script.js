@@ -4,8 +4,6 @@ document.body.appendChild(ol);
 const cities = ["Alkmaar", "Amsterdam", "Rotterdam", "Utrecht", "Heerhugowaard", "Haarlem"];
 cities.sort();
 
-cities.forEach(showCities);
-
-function showCities(city) {
-    cities;
+for(let i = 0; i < cities.length; i++) {
+    document.querySelector("ol").innerHTML = cities[i];
 }

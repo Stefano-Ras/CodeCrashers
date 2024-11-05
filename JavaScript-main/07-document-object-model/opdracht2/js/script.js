@@ -7,6 +7,5 @@ function changeList() {
         }
         x = i + 1
         list[i].innerHTML = "Dit is item " + x;
-        console.log(i);
     }
 }

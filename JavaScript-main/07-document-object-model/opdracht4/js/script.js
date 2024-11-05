@@ -1,4 +1,7 @@
-let bold = document.querySelectorAll("b");
-let strong = document.createElement("strong");
-document.replaceChild(bold, strong.childNodes[0]);
-document.querySelector("p:nth-of-child(2n)").style.color = "maroon";
+const bold = document.querySelectorAll("b");
+const strong = document.createElement("strong");
+const section = document.querySelector("section");
+document.querySelector("button").addEventListener("click", function(){
+    section.replaceChild(bold, strong);
+    document.querySelector("p:nth-of-child(2n)").style.color = "maroon";
+});

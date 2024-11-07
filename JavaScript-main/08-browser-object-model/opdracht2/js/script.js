@@ -1,4 +1,7 @@
 document.querySelector("#open").addEventListener("click", () => {
-    let window = window.open("", "_blank", "width=300,height=200");
-    window.document.write(new Date());
+    window.open("", "_blank", "width=300,height=200");
+    document.write(new Date());
+    document.querySelector("#close").addEventListener("click", () => {
+        window.close();
+    });
 });

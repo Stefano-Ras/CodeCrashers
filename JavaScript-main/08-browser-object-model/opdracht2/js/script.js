@@ -1,7 +1,9 @@
 document.querySelector("#open").addEventListener("click", () => {
-    window.open("", "_blank", "width=300,height=200");
-    document.write(new Date());
+    const open = window.open("", "_blank", "width=300,height=200");
+    open.document.open();
+    open.document.write(new Date());
+    open.document.close();
     document.querySelector("#close").addEventListener("click", () => {
-        window.close();
+        open.window.close();
     });
 });

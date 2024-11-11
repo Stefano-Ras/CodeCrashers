@@ -1,9 +1,8 @@
 document.querySelector(".open").addEventListener("click", () => {
-    window.open("https://www.youtube.com", "_blank", "width=400,height=300");
-});
-
-document.querySelector(".close").addEventListener("click", () => {
-    window.close(window);
+    open = window.open("https://www.youtube.com", "_blank", "width=400,height=300");
+    document.querySelector(".close").addEventListener("click", () => {
+        open.window.close();
+    });
 });
 
 document.querySelector(".reload").addEventListener("click", () => {

@@ -1,5 +1,7 @@
-document.querySelector(".blok").addEventListener("click", changeBackground);
+const blocks = document.querySelectorAll(".blok");
 
-function changeBackground() {
-    this.style.background = "lightblue";
+for(i = 0; i < blocks.length; i++) {
+    blocks[i].addEventListener("dblclick", function () {
+        this.style.background = "lightblue";
+    });
 }

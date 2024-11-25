@@ -121,7 +121,10 @@ const games = [
 	},
 ];
 
+const gameList = document.getElementById("gamelist");
+
 for (const game of games) {
-    document.getElementById("gamelist").innerHTML += `<article class='grid-item'>`
-	+ `<div>` + game.name + `</div><img src=../images/opdracht4/`+ game.img +`></img><div>` + game.platform + ` | ` +  game.releaseEU + "Niet uitgebracht" + `</div>` + `</article>`;
+    gameList.innerHTML += `<article class='grid-item'>` + `<div>` + game.name
+	+ `<div><img src="../images/opdracht4/${game.img}"</img></div>` + game.platform
+	+ ` | ` + (game.releaseEU ? game.releaseEU : "Niet uitgebracht") + `</div>` + `</article>`;
 }

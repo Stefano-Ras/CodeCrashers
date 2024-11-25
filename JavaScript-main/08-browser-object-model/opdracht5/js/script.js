@@ -2,8 +2,7 @@ let button = document.querySelector("button");
 let time;
 let i = 0;
 document.querySelector("button").addEventListener("click", () => {
-    i++;
-    if(i % 2){
+    if(i % 2 == 0){
         time = setInterval(function() {
             let date = new Date();
             let datetime = date.toTimeString();
@@ -16,4 +15,5 @@ document.querySelector("button").addEventListener("click", () => {
         button.innerHTML = "Play";
         clearInterval(time);
     }
+    i++;
 });

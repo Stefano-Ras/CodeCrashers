@@ -1,18 +1,18 @@
 let timeout;
 
-document.getElementById("leave").addEventListener('click', (e) => {
+document.getElementById("leave").addEventListener('click', () => {
     timeout = setTimeout(() => {
         location.assign("https://youtu.be/kTp2tYKmftE?t=31");
      }, 4500);
 });
 
-document.getElementById("background").addEventListener('click', (e) => {
+document.getElementById("background").addEventListener('click', () => {
     timeout = setTimeout(() => {
         document.querySelector("body").style.background = "dodgerblue";
     }, 3000);
 });
 
-document.getElementById("addcontent").addEventListener('click', (e) => {
+document.getElementById("addcontent").addEventListener('click', () => {
     timeout = setTimeout(() => {
         const addParagraph = document.createElement("p");
         const addText = document.createTextNode("This is new text!");

@@ -3,10 +3,10 @@ document.querySelector("button").addEventListener("click", displayAlert);
 let title = document.querySelector("title").innerHTML;
 let action = document.querySelector("form").action;
 let css = document.querySelector("link").href;
-let pass = document.querySelector("input:nth-of-type(3n)").value;
+let pass = document.querySelector("input[type='password']");
 
 function displayAlert() {
-    window.alert(title + " - " + action + " - " + css + " - " + pass);
+    window.alert(title + " - " + action + " - " + css + " - " + pass.value);
 }
 
 document.querySelector("button:nth-of-type(2n)").addEventListener("click", changeValues);

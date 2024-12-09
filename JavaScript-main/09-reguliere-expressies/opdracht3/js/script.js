@@ -1,4 +1,6 @@
-let names = "Branford, Terra\nCole, Locke\nGaramonde, Cyan\nChére, Celes";
-let namesNew = names.replace(/Branford, Terra\nCole, Locke\nGaramonde, Cyan\nChére, Celes/, "Terra BRANFORD\nLocke COLE\nCyan GARAMONDE\nCeles CHÉRE");
+const names = "Branford, Terra\nCole, Locke\nGaramonde, Cyan\nChére, Celes";
+const namesNew = names.replace(/([A-zÀ-ú]+),\s([A-zÀ-ú]+)/g, "$2"+ " " + "$1");
 
 console.log(namesNew);
+
+//Branford, Terra\nCole, Locke\nGaramonde, Cyan\nChère, Celes

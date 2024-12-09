@@ -6,29 +6,23 @@ const persons = [
 	{name: "Tim", age: 54, loc: "Oudorp"},
 ];
 
-const format = persons => {
-    persons.name = persons.name.substring(0,1) + ".";
-    persons.age = persons.age + 1;
-    persons.loc = persons.loc.toUpperCase();
+const formatPersons = persons => {
+    persons.name.substring(0,1) + ".";
+    persons.age + 1;
+    persons.loc.toUpperCase();
     console.log(persons);
 };
 
-persons.map(format, persons[0]);
+const formattedpersons = persons.map(formatPersons);
 
-/* const names = ["Jeremiah", "Brienne", "Gaspar", "Yoeri"];
+console.log(formattedpersons);
 
-// Namen inkorten en opslaan in nieuwe array.
-const results = names.map(name => name.substring(0,3));
-console.log(results); */
+for(let i = 0; i < formattedpersons.length; i++) {
+    document.querySelector("body").innerHTML = "<section><h1>" + formattedpersons.name +
+    "</h1><p>" + formattedpersons.age + "</p><p>" + formattedpersons.loc + "</p></section>";
+}
 
-/* const persons1 = [
-    {firstname : "Malcom", lastname: "Reynolds"},
-    {firstname : "Kaylee", lastname: "Frye"},
-    {firstname : "Jayne", lastname: "Cobb"}
-  ];
-  
-  document.getElementById("demo").innerHTML = persons1.map(getFullName);
-  
-  function getFullName(item) {
-    return [item.firstname,item.lastname].join(" ");
-} */
+/* formattedpersons.forEach(person => {
+    document.querySelector("body").innerHTML = "<section><h1>" + person.name +
+    "</h1><p>" + person.age + "</p><p>" + person.loc + "</p></section>";
+}); */

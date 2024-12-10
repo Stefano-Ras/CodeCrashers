@@ -46,7 +46,7 @@ const audi = {
         return this._kmStand;
     },
     set kmStand(kmStand) {
-		if (typeof kmStand === "int") {
+		if (Number.isInteger(kmStand)) {
             this._kmStand = kmStand;
         } else {
             throw new TypeError("Kilometerstand moet een geheel getal zijn.");

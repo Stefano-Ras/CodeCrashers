@@ -7,13 +7,13 @@ const persons = [
 ];
 
 const formatPersons = persons => {
-    persons.name.substring(0,1) + ".";
-    persons.age + 1;
-    persons.loc.toUpperCase();
+    persons.name = persons.name.substring(0,1) + ".";
+    persons.age = persons.age + 1;
+    persons.loc = persons.loc.toUpperCase();
     console.log(persons);
 };
 
-const formattedpersons = persons.map(formatPersons);
+const formattedpersons = new Array(persons.map(formatPersons));
 
 console.log(formattedpersons);
 

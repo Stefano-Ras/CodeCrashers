@@ -1,7 +1,10 @@
 function calculateStringLengs(...args) {
     console.log(args);
-    const stringLengsths = arguments.map();
-    console.log(stringLengsths);
+    for(let i = 0; i < args; i++) {
+        const stringLengsths = args.map(calculateStringLengs());
+        console.log(stringLengsths);
+        const stringLengsthsSum = args.reduce(calculateStringLengs);
+    }
 }
 
-calculateStringLengs("1", "2", "3");
+calculateStringLengs(1, 2, 3);

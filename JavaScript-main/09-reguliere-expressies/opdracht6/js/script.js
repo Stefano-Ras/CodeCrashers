@@ -1,6 +1,15 @@
 window.addEventListener('DOMContentLoaded', () => {
     document.querySelector("form").addEventListener("submit", (e) => {
         e.preventDefault();
+        function invalidText(errorinput, labelinput) {
+            const span = document.createElement("span");
+            span.style.color = "red";
+            let text = document.createTextNode(errorinput);
+            span.appendChild(text);
+            let label = document.querySelector(labelinput);
+            label.appendChild(span);
+            console.warn(errorinput);
+        }
         let phoneNumber = document.getElementById("phone").value;
         const phoneRegex = /^(([+31 6 ]{6})|^([06]{2})([ |-]*))(\d{8}$)/;
         try{
@@ -8,13 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 throw "Invalid phone number!";
             }
         } catch(err) {
-            const span = document.createElement("span");
-            span.style.color = "red";
-            let text = document.createTextNode(err);
-            span.appendChild(text);
-            let label = document.querySelector(".phone-error");
-            label.appendChild(span);
-            console.warn(err);
+            invalidText(err, ".phone-error");
         }
 
         let birthday = document.getElementById("birthday").value;
@@ -24,13 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 throw "Invalid birthday!";
             }
         } catch(err) {
-            let span = document.createElement("span");
-            span.style.color = "red";
-            let text = document.createTextNode(err);
-            span.appendChild(text);
-            let label = document.querySelector(".birthday-error");
-            label.appendChild(span);
-            console.warn(err);
+            invalidText(err, ".birthday-error");
         }
 
         let address = document.getElementById("address").value;
@@ -40,13 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 throw "Invalid address";
             }
         } catch(err) {
-            let span = document.createElement("span");
-            span.style.color = "red";
-            let text = document.createTextNode(err);
-            span.appendChild(text);
-            let label = document.querySelector(".address-error");
-            label.appendChild(span);
-            console.warn(err);
+            invalidText(err, ".address-error");
         }
 
         let url = document.getElementById("url").value;
@@ -56,13 +47,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 throw "Invalid URL!";
             }
         } catch(err) {
-            let span = document.createElement("span");
-            span.style.color = "red";
-            let text = document.createTextNode("Invalid URL!");
-            span.appendChild(text);
-            let label = document.querySelector(".url-error");
-            label.appendChild(span);
-            console.warn(err);
+            invalidText(err, ".url-error");
         }
         
         let password = document.getElementById("password").value;
@@ -72,13 +57,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 throw "Invalid password!";
             }
         } catch(err) {
-            let span = document.createElement("span");
-            span.style.color = "red";
-            let text = document.createTextNode(err);
-            span.appendChild(text);
-            let label = document.querySelector(".password-error");
-            label.appendChild(span);
-            console.warn(err);
+            invalidText(err, ".password-error");
         }
     });
 });

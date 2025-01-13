@@ -18,14 +18,14 @@ const audi = {
 console.log(audi);
 
 document.querySelector("body").innerHTML =
-"<table><tr><td>Naam</td><td>"  + audi.naam + "</td></tr>" +
-"<tr><td>Bouwjaar</td><td>"  + audi.bouwjaar + "</td></tr>" +
-"<tr><td>Km stand</td><td>"  + audi.kmStand + "</td></tr>" +
-"<tr><td>Energielabel</td><td>"  + audi.energielabel + "</td></tr>" +
-"<tr><td>Brandstof</td><td>"  + audi.brandstof + "</td></tr>" +
-"<tr><td>Prijs</td><td>"  + audi.prijs + "</td></tr>" +
-"<tr><td>Garantie</td><td>"  + audi.garantie + "</td></tr>" +
-"<tr><td>Opties</td><td>"  + audi.opties + "</td></tr></table>";
+"<table><tr><td>Naam</td><td>" + audi.naam + "</td></tr>" +
+"<tr><td>Bouwjaar</td><td>" + audi.bouwjaar + "</td></tr>" +
+"<tr><td>Km stand</td><td>" + audi.kmStand + "</td></tr>" +
+"<tr><td>Energielabel</td><td>" + audi.energielabel + "</td></tr>" +
+"<tr><td>Brandstof</td><td>" + audi.brandstof + "</td></tr>" +
+"<tr><td>Prijs</td><td>" + audi.prijs + "</td></tr>" +
+"<tr><td>Garantie</td><td>" + audi.garantie + "</td></tr>" +
+"<tr><td>Opties</td><td>" + audi.opties + "</td></tr></table>";
 
 for(let element in audi.motor) {
     console.log(audi.motor[element]);

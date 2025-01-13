@@ -7,4 +7,4 @@ function calculateStringLengs(...args) {
     }
 }
 
-calculateStringLengs(1, 2, 3);
+calculateStringLengs(1, 2, 3, 4, 5);

@@ -15,7 +15,7 @@ function getGames(){
 	}, 1000);
 }
 
-const myPromise = new Promise((resolve, reject) => {
+const myPromise = new Promise((resolve) => {
 	function addGames(newGames){
 		setTimeout(() => {
 			// ... is de spread operator, deze destructureert de meegegeven array zodat ze als losse values toegevoegd worden aan de games array

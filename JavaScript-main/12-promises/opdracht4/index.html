@@ -41,39 +41,99 @@
 		</figure>
 	</body>
 	<script>
-		setTimeout(() => {
-			document.querySelector(".blok:nth-child(1)").style.backgroundColor = "dodgerblue";
+		let htmlResolve = false;
+		let consoleResolve = false;
+		const htmlPromise = new Promise((myResolve, myReject) => {
 			setTimeout(() => {
-				document.querySelector(".blok:nth-child(2)").style.backgroundColor = "khaki";
+				document.querySelector(".blok:nth-child(1)").style.backgroundColor = "dodgerblue";
+				myResolve();
+			}, 600);
+		})
+		.then(() => {
+			return new Promise((myResolve, myReject) => {
+				setTimeout(() => {
+					document.querySelector(".blok:nth-child(2)").style.backgroundColor = "khaki";
+					myResolve();
+				}, 400);
+			});
+		})
+		.then(() => {
+			return new Promise((myResolve, myReject) => {
 				setTimeout(() => {
 					document.querySelector(".blok:nth-child(3)").style.backgroundColor = "mediumseagreen";
-					setTimeout(() => {
-						document.querySelector(".blok:nth-child(4)").style.backgroundColor = "silver";
-						setTimeout(() => {
-							document.querySelector(".blok:nth-child(5)").style.backgroundColor = "violet";
-							setTimeout(() => {
-								document.querySelector("h1").innerHTML = "You say tomato, but I say Kenny";
-								setTimeout(() => {
-									document.querySelector("img").src = "images/kenny.png";
-								}, 1000);						
-							}, 600);
-						}, 400);				
-					}, 200);			
-				}, 400);		
-			}, 600);	
-		}, 1000);
-
-		setTimeout(() => {
-			console.log("You say yes");
+					myResolve();	
+				}, 200);
+			});
+		})
+		.then(() => {
+			return new Promise((myResolve, myReject) => {
+				setTimeout(() => {
+					document.querySelector(".blok:nth-child(4)").style.backgroundColor = "silver";
+					myResolve();
+				}, 400);
+			});
+		})
+		.then(() => {
+			return new Promise((myResolve, myReject) => {
+				setTimeout(() => {
+					document.querySelector(".blok:nth-child(5)").style.backgroundColor = "violet";
+					myResolve();	
+				}, 600);
+			});
+		})
+		.then(() => {
+			return new Promise((myResolve, myReject) => {
+				setTimeout(() => {
+					document.querySelector("h1").innerHTML = "You say tomato, but I say Kenny";
+					myResolve();
+				}, 1000);
+			});
+		})
+		.then(() => {
+			return new Promise((myResolve, myReject) => {
+				setTimeout(() => {
+					document.querySelector("img").src = "images/kenny.png";	
+					myResolve();
+					htmlResolve = true;
+				}, 1000);
+			});
+		});
+		const consolePromise = new Promise((myResolve, myReject) => {
 			setTimeout(() => {
-				console.warn("I say no");
+				console.log("You say yes");
+				myResolve();
+			}, 1500);
+		})
+		.then(value => {
+			return new Promise((myResolve, myReject) => {
+				setTimeout(() => {
+					console.warn("I say no");
+					myResolve();
+				}, 1000);
+			});
+		})
+		.then(value => {
+			return new Promise((myResolve, myReject) => {
 				setTimeout(() => {
 					console.log("You say stop");
-						setTimeout(() => {
-						console.warn("I say go go go");
-					}, 1000);
+					myResolve();
 				}, 1500);
-			}, 1000);
-		}, 1500);
-	</script>	
+			});
+		})
+		.then(value => {
+			return new Promise((myResolve, myReject) => {
+				setTimeout(() => {
+					console.warn("I say go go go");
+					myResolve();
+					consoleResolve = true;
+				}, 1000);
+			});
+		});
+		function resolve() {
+			if(htmlResolve == true && consoleResolve == true) {
+				alert("Processes completed");
+			}
+		}
+		setTimeout(resolve, 5500);
+	</script>
 </html>

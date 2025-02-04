@@ -1,0 +1,6 @@
+'' ipv "" op regel 2
+Missende comma aan het eind van regel 21
+; ipv : op regel 43
+: ipv , op regels 53/54
+Missende : voor { op regel 65
+Bracket werd niet afgesloten

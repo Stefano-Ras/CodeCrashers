@@ -30,7 +30,5 @@ document.querySelector("body").innerHTML =
 for(let element in audi.motor) {
     console.log(audi.motor[element]);
     document.querySelector("table").innerHTML +=
-    "<tr><td>" + `${element}:` + "</td><td>" + `${audi.motor[element]}` + "</tr></td>";
-    document.querySelector("table").style.textTransform = "Capitalize";
-    document.querySelector("table").style.border = "1px solid yellow";
+    "<tr><td>" + `${element}:` + "</td><td>" + `${audi.motor[element]}` + "</td></tr>";
 }

@@ -16,7 +16,7 @@ function getGames(){
 }
 
 function addGames(newGames){
-	return new Promise((resolve) => {
+	return new Promise((resolve, reject) => {
 		setTimeout(() => {
 			// ... is de spread operator, deze destructureert de meegegeven array zodat ze als losse values toegevoegd worden aan de games array
 			games.push(...newGames);
@@ -26,7 +26,7 @@ function addGames(newGames){
 }
 
 addGames([
-	{title: `Legend of Mana`, description:`Set off on a journey to find the mystical Mana Tree seen in a dream, before discovering... the world map is empty! During your travels, you’ll acquire special artifacts; place these wherever you’d like on the map to bring towns and dungeons to life and advance the story. Meet a colorful cast of characters, square off against fearsome monsters, and complete quests in the vast world of Fa’Diel.` },
-	{title: `Project Triangle Strategy`, description:`Command a group of warriors as Serenoa, heir of House Wolffort, in a tangled plot where your decisions make all the difference. Key choices you make will bolster one of three convictions—Utility, Morality, Liberty—which together make up Serenoa’s world view and influence how the story will unfold. When faced with truly momentous decisions, multiple characters will weigh in by casting their votes on the Scales of Conviction.` }
-]);
+			{title: `Legend of Mana`, description:`Set off on a journey to find the mystical Mana Tree seen in a dream, before discovering... the world map is empty! During your travels, you’ll acquire special artifacts; place these wherever you’d like on the map to bring towns and dungeons to life and advance the story. Meet a colorful cast of characters, square off against fearsome monsters, and complete quests in the vast world of Fa’Diel.` },
+			{title: `Project Triangle Strategy`, description:`Command a group of warriors as Serenoa, heir of House Wolffort, in a tangled plot where your decisions make all the difference. Key choices you make will bolster one of three convictions—Utility, Morality, Liberty—which together make up Serenoa’s world view and influence how the story will unfold. When faced with truly momentous decisions, multiple characters will weigh in by casting their votes on the Scales of Conviction.` }
+		]).then((value) => {console.log(value)});
 getGames();

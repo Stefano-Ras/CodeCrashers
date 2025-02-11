@@ -35,7 +35,6 @@ const failureAlert = (message, type) => {
     form.addEventListener('submit', event => {
       event.preventDefault()
       if (!form.checkValidity()) {
-        console.log("Alert");
         failureAlert('Let op! U heeft niet alle velden ingevuld.')
         event.stopPropagation()
       } else {

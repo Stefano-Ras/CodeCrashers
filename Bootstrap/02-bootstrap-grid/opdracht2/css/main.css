@@ -1,0 +1,27 @@
+body {
+	background-color: darkgray;
+}
+header {
+	min-height: 100px;
+	background-color: rgb(163, 226, 215);
+}
+header img {
+	margin: 10px 0;
+}
+header h1 {
+	font-size: 3em;
+	line-height: 1.9em;
+	color: white;
+}
+#top-content {
+	min-height: 350px;
+	background-color: rgb(218, 243, 239);
+}
+#bottom-content {
+	min-height: 300px;
+	background-color: rgb(237, 249, 247);
+}
+footer {
+	min-height: 50px;
+	background-color: rgb(89, 203, 182);
+}

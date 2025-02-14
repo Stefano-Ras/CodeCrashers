@@ -1,0 +1,7 @@
+html, body {
+	background: linear-gradient(to bottom, khaki, white);
+	background-repeat: no-repeat;
+}
+figure {
+	padding: 20px;
+}

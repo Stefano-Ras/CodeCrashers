@@ -20,7 +20,7 @@ function addGames(newGames){
 		setTimeout(() => {
 			// ... is de spread operator, deze destructureert de meegegeven array zodat ze als losse values toegevoegd worden aan de games array
 			games.push(...newGames);
-			resolve("Resolved");
+		resolve("Resolved");
 		}, 2000);
 	})
 }
@@ -31,6 +31,4 @@ addGames([
 ]).then((resolved) => {
 	getGames();
 	console.log(resolved);
-}, (rejected) => {
-	console.log(rejected);
 });

@@ -129,11 +129,8 @@
 				}, 1000);
 			});
 		});
-		function resolve() {
-			if(htmlResolve == true && consoleResolve == true) {
-				alert("Processes completed");
-			}
-		}
-		setTimeout(resolve, 5500);
+		const promises = [htmlPromise, consolePromise];
+
+		Promise.allSettled(promises).then(() => alert("Processes completed"));
 	</script>
 </html>

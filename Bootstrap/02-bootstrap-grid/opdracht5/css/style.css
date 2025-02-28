@@ -1,0 +1,112 @@
+.row > div {
+    padding: 0 24px;
+}
+
+.header {
+    background: #E3DEDE;
+    border-bottom: 5px solid black;
+}
+
+.titlegreen {
+    color: #4C691E;
+}
+
+.banner {
+    height: 100%;
+    max-height: 500px;
+    > img {
+        height: 100%;
+        max-height: 500px;
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+.collection {
+    margin-top: 40px;
+    > div:first-of-type {
+        justify-items: center;
+        align-items: center;
+        background: #4C691E;
+        color: white;
+        > h4 {
+            text-align: center;
+            padding-top: 8px;
+        }
+        > h5 {
+            padding-bottom: 8px;
+        }
+        > div {
+            padding: 0 15px;
+        }
+    }
+}
+
+.collectionprice {
+    background: #E3DEDE;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    > span:last-of-type {
+        margin-left: auto;
+    }
+}
+
+.collectionrow {
+    background: #E3DEDE;
+    > div {
+        margin: 15px 0;
+    }
+}
+
+.collectionimage {
+    background: white;
+    > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.collectiontext {
+    background: #4C691E;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.brands {
+    background: #2A2A2A;
+    color: white;
+    border-bottom: 5px solid #4C691E;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+    > div > img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+    > div:last-of-type {
+        text-align: center;
+    }
+}
+
+.footer {
+    background: #2A2A2A;
+    color: white;
+    > div {
+        padding-top: 20px;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contacttimes {
+    display: inline-block;
+    font-size: 12px;
+}

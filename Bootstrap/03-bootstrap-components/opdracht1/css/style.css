@@ -1,0 +1,79 @@
+.Vaporeon {
+    > div {
+        background: #6890F0;
+    }
+    > h2 > button{
+        background: #6890F0;
+        color: #ffffff;
+    }
+}
+
+.Jolteon {
+    > div {
+        background: #F8D030;
+    }
+    > h2 > button{
+        background: #F8D030;
+        color: #ffffff;
+    }
+}
+
+.Flareon {
+    > div {
+        background: #F08030;
+    }
+    > h2 > button{
+        background: #F08030;
+        color: #ffffff;
+    }
+}
+
+.Espeon {
+    > div {
+        background: #F85888;
+    }
+    > h2 > button{
+        background: #F85888;
+        color: #ffffff;
+    }
+}
+
+.Umbreon {
+    > div {
+        background: #705848;
+    }
+    > h2 > button{
+        background: #705848;
+        color: #ffffff;
+    }
+}
+
+.Leafeon {
+    > div {
+        background: #78C850;
+    }
+    > h2 > button{
+        background: #78C850;
+        color: #ffffff;
+    }
+}
+
+.Glaceon {
+    > div {
+        background: #98D8D8;
+    }
+    > h2 > button{
+        background: #98D8D8;
+        color: #ffffff;
+    }
+}
+
+.Sylveon {
+    > div {
+        background: #EE99AC;
+    }
+    > h2 > button{
+        background: #EE99AC;
+        color: #ffffff;
+    }
+}

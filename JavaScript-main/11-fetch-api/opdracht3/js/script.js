@@ -4,4 +4,4 @@ setInterval(() => {
     .then(data => {
         document.getElementById("images").innerHTML = data;
     })
-}, 300);
+}, 30000);
